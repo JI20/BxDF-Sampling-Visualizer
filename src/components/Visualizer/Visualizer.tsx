@@ -6,13 +6,36 @@ import { sampleSphericalCaps } from "./Sampling";
 export default function Visualizer() {
   const [showGrid, setShowGrid] = useState(true);
   const [resetCamera, setResetCamera] = useState(0);
-  const [content, setContent] = useState({
-    in: {
-      origin: { x: 1, y: 1, z: 1 },
-      direction: { x: -1, y: -1, z: -1 },
+  const [content, setContent] = useState([
+    {
+      in: {
+        origin: { x: 0, y: 0, z: 0 },
+        direction: { x: 1, y: 1, z: 1 },
+      },
+      out: [],
     },
-    out: [],
-  });
+    {
+      in: {
+        origin: { x: 0, y: 0, z: 0 },
+        direction: { x: -1, y: 1, z: 1 },
+      },
+      out: [],
+    },
+    {
+      in: {
+        origin: { x: 0, y: 0, z: 0 },
+        direction: { x: 1, y: 1, z: -1 },
+      },
+      out: [],
+    },
+    {
+      in: {
+        origin: { x: 0, y: 0, z: 0 },
+        direction: { x: -1, y: 1, z: -1 },
+      },
+      out: [],
+    },
+  ]);
 
   return (
     <div className="h-full w-full">
@@ -25,17 +48,22 @@ export default function Visualizer() {
             className="hover:text-blue-500 cursor-pointer"
             onClick={() => {
               setContent((state) => {
-                let newSample = {
-                  origin: { x: 0, y: 0, z: 0 },
-                  direction: sampleSphericalCaps([
-                    content.in.direction.x,
-                    content.in.direction.y,
-                    content.in.direction.z,
-                  ]),
-                };
-                let newOut = structuredClone(state.out);
-                newOut.push(newSample);
-                let newState = { in: state.in, out: newOut };
+                let newState: any[] = [];
+                state.forEach((set) => {
+                  let newSample = {
+                    origin: { x: 0, y: 0, z: 0 },
+                    direction: sampleSphericalCaps([
+                      set.in.direction.x,
+                      set.in.direction.y,
+                      set.in.direction.z,
+                    ]),
+                  };
+                  let newOut = structuredClone(set.out);
+                  newOut.push(newSample);
+                  let newSet = { in: set.in, out: newOut };
+                  newState.push(newSet);
+                });
+
                 return newState;
               });
             }}
