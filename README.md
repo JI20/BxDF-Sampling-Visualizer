@@ -1,4 +1,4 @@
-# BxDF Sampling Visualizer 💡
+# 🚀 BxDF Sampling Visualizer 💡
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Tech Stack](https://img.shields.io/badge/Tech-React%20%7C%20Three.js%20%7C%20TypeScript-blue)
@@ -11,7 +11,7 @@ A web-based, real-time visualizer for exploring the behavior of various BxDF (Bi
 
 ---
 
-## About The Project
+## 📚 About The Project
 
 In computer graphics, a BxDF is a mathematical function that describes how light is reflected and refracted at a surface. Understanding the distribution of these light paths is crucial for creating realistic materials.
 
@@ -22,7 +22,7 @@ This tool provides an interactive 3D visualization of this process:
 
 It currently serves as a testbed for a refraction BxDF, but is designed to be easily extensible with other models.
 
-### Built With
+### 💻 Built With
 
 * [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 * [React](https://reactjs.org/)
@@ -32,7 +32,7 @@ It currently serves as a testbed for a refraction BxDF, but is designed to be ea
 
 ---
 
-## Getting Started
+## 🔧 Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
@@ -62,18 +62,18 @@ Your local copy should now be running in your browser!
 
 ---
 
-## How to Use
+## 🚀 How to Use
 
 The user interface allows for interactive exploration of the BxDF model.
 
-* **Set Incoming Direction**: Must be set in the code. Set Input Direction Button does not work currently.
+* **Set Incoming Direction**: Must be set in the code. The "Set Input Direction" button does not work currently.
 * **Generate new sample**: Click this button to generate and display a single new sampled outgoing ray.
 * **Show grid / Reset camera**: Use these buttons for scene navigation and visibility control.
 * **Reset content**: Clears all generated samples from the scene.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are what make the open-source community such an amazing place to learn and create. Any contributions you make are **greatly appreciated**.
 
@@ -81,13 +81,13 @@ Please follow the standard GitHub Fork & Pull Request workflow. For suggestions 
 
 ---
 
-## ## License
+## 📜 License
 
 Distributed under the MIT License. See the `LICENSE` file for more information.
 
 ---
 
-## ## Contact
+## 📬 Contact
 
 Jonas Itt - [JI20](https://github.com/JI20)
 
